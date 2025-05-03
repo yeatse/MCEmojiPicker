@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol MCEmojiSkinTonePickerDelegate: AnyObject {
+@MainActor protocol MCEmojiSkinTonePickerDelegate: AnyObject {
     func updateSkinTone(
         _ skinToneRawValue: Int,
         in cell: MCEmojiCollectionViewCell

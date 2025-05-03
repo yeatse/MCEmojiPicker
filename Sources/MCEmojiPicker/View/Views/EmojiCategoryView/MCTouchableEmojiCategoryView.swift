@@ -23,7 +23,7 @@
 import UIKit
 
 /// Delegate for handling touch gesture.
-protocol MCEmojiCategoryViewDelegate: AnyObject {
+@MainActor protocol MCEmojiCategoryViewDelegate: AnyObject {
     /**
      Processes an event by category selection.
      

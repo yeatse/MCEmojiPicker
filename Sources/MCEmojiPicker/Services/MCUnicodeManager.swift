@@ -88,22 +88,16 @@ final class MCUnicodeManager: MCUnicodeManagerProtocol {
     
     /// The maximum available emoji version for the current iOS version.
     private static let maxCurrentAvailableEmojiVersion: Double = {
-        let currentIOSVersion = (UIDevice.current.systemVersion as NSString).floatValue
-        switch currentIOSVersion {
-        case 12.1...13.1:
-            return 11.0
-        case 13.2...14.1:
-            return 12.0
-        case 14.2...14.4:
-            return 13.0
-        case 14.5...15.3:
-            return 13.1
-        case 15.4...16.3:
-            return 14.0
-        case 16.4...:
+        if #available(iOS 16.4, *) {
             return 15.0
-        default:
-            return 5.0
+        } else if #available(iOS 15.4, *) {
+            return 14.0
+        } else if #available(iOS 14.5, *) {
+            return 13.1
+        } else if #available(iOS 13.2, *) {
+            return 12.0
+        } else if #available(iOS 12.1, *) {
+            return 11.0
         }
     }()
 

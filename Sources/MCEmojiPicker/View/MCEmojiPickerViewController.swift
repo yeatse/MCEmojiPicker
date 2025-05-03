@@ -22,7 +22,7 @@
 
 import UIKit
 
-public protocol MCEmojiPickerDelegate: AnyObject {
+@MainActor public protocol MCEmojiPickerDelegate: AnyObject {
     func didGetEmoji(emoji: String)
 }
 

@@ -26,7 +26,7 @@ final class MCEmojiSectionHeader: UICollectionReusableView {
     
     // MARK: - Constants
     
-    private enum Constants {
+    @MainActor private enum Constants {
         static let backgroundColor = UIColor.popoverBackgroundColor
         
         static let headerLabelColor = UIColor.systemGray

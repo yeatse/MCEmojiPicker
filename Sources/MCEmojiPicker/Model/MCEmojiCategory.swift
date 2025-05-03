@@ -24,7 +24,7 @@ import Foundation
 
 /// The main model that is used to configure the main collection.
 @_spi(JSON)
-public struct MCEmojiCategory: Codable {
+public struct MCEmojiCategory: Codable, Sendable {
     public var type: MCEmojiCategoryType
     public var emojis: [MCEmoji]
 
@@ -40,7 +40,7 @@ public struct MCEmojiCategory: Codable {
 
 /// This enumeration shows a list of categories that are contained in the main collection.
 @_spi(JSON)
-public enum MCEmojiCategoryType: Int, CaseIterable, Codable {
+public enum MCEmojiCategoryType: Int, CaseIterable, Codable, Sendable {
     case frequentlyUsed
     case people
     case nature

@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol MCEmojiCollectionViewCellDelegate: AnyObject {
+@MainActor protocol MCEmojiCollectionViewCellDelegate: AnyObject {
     func preview(_ emoji: MCEmoji?, in cell: MCEmojiCollectionViewCell)
     func choiceSkinTone(_ emoji: MCEmoji?, in cell: MCEmojiCollectionViewCell)
     func didSelect(_ emoji: MCEmoji?, in cell: MCEmojiCollectionViewCell)
@@ -42,7 +42,7 @@ final class MCEmojiCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Constants
     
-    private enum Constants {
+    @MainActor private enum Constants {
         static let emojiLabelFontSize = 29.0.fit()
         static let emojiLabelInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)
         

@@ -1,11 +1,11 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let package = Package(
     name: "MCEmojiPicker",
     defaultLocalization: "en",
-    platforms: [.iOS("11.1")],
+    platforms: [.iOS(.v17)],
     products: [
         .executable(name: "MCEmojiPickerJSON", targets: ["MCEmojiPickerJSON"]),
         .library(name: "MCEmojiPicker", targets: ["MCEmojiPicker"])
@@ -29,5 +29,5 @@ let package = Package(
         ),
         .executableTarget(name: "MCEmojiPickerJSON", dependencies: ["MCEmojiPicker"])
     ],
-    swiftLanguageVersions: [.v4_2]
+    swiftLanguageModes: [.v6]
 )

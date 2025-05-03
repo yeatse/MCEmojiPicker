@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol MCEmojiPickerViewDelegate: AnyObject {
+@MainActor protocol MCEmojiPickerViewDelegate: AnyObject {
     /// Processes an event by category selection.
     ///
     /// - Parameter index: index of the selected category.

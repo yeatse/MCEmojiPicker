@@ -24,7 +24,7 @@ import Foundation
 
 /// The main model for interacting with emojis.
 @_spi(JSON)
-public struct MCEmoji: Codable {
+public struct MCEmoji: Codable, Sendable {
     // MARK: - Types
     
     /// Keys for storage in UserDefaults.

@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol MCEmojiSkinTonePickerViewDelegate: AnyObject {
+@MainActor protocol MCEmojiSkinTonePickerViewDelegate: AnyObject {
     func didSelectEmojiTone(_ emojiToneIndex: Int?)
     func feedbackImpactOccurred()
 }
